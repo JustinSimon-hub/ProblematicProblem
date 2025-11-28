@@ -78,7 +78,7 @@ static bool cont = true;
          
            
         }
-        Console.Write($"Ah got it! {randomActivity}, your random activity is: {userName}! Is this ok or do you want to grab another activity? Keep/Redo: ")
+                Console.Write($"Ah got it! {randomActivity}, your random activity is: {userName}! Is this ok or do you want to grab another activity? Keep/Redo: ");
                 Console.WriteLine();
          cont = bool.Parse(Console.ReadLine());
     }
