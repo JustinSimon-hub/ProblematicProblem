@@ -7,14 +7,22 @@ namespace ProblematicProblem
 {
    class Program 
     {
+        //Alaways remember to comment code and clearly identify ambiguous variables
         public static Random rng = new Random();
-static bool cont = true;
+        static bool cont = true;
         static List<string> activities = new List<string>() { "Movies", "Paintball", "Bowling", "Lazer Tag", "LAN Party", "Hiking", "Axe Throwing", "Wine Tasting" };
+        public static string userAnswer;
+        
         static void Main(string[] args)
 {
-            Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
-            bool cont = bool.Parse(Console.ReadLine());
-    Console.WriteLine();
+    Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
+    userAnswer = Console.ReadLine();
+            if(userAnswer.ToLower() != "yes")
+            {
+                Console.WriteLine("Goodbye");
+            }
+            Console.WriteLine();
+
     Console.Write("We are going to need your information first! What is your name? ");
     string userName = Console.ReadLine();
     Console.WriteLine();
